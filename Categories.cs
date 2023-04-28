@@ -8,7 +8,7 @@ namespace AutoSearch
 {
     internal static class Categories
     {
-        static Dictionary<string, string> marks = new Dictionary<string, string>()
+        public static Dictionary<string, string> marks = new Dictionary<string, string>()
         {
             {"BMW", "BMW" },
             {"Mercedes-Benz", "Mercedes" },
@@ -26,7 +26,7 @@ namespace AutoSearch
             {"Toyota", "Toyota" }
         };
 
-        static Dictionary<string, string> bodyType = new Dictionary<string, string>()
+        public static Dictionary<string, string> bodyType = new Dictionary<string, string>()
         {
             {"Седан", "SEDAN" },
             {"Хэтчбек 3 дв.", "HATCHBACK_3_DOORS" },
@@ -38,7 +38,7 @@ namespace AutoSearch
             {"Купе", "COUPE" }
         };
 
-        static Dictionary<string, string> engineType = new Dictionary<string, string>()
+        public static Dictionary<string, string> engineType = new Dictionary<string, string>()
         {
             {"Бензин", "GASOLINE" },
             {"Дизель", "DIESEL" },
@@ -46,7 +46,7 @@ namespace AutoSearch
             {"Гибрид", "HYBRID" },
         };
 
-        static Dictionary<string, string> transmission = new Dictionary<string, string>()
+        public static Dictionary<string, string> transmission = new Dictionary<string, string>()
         {
             {"Автоматическая", "AUTOMATIC" },
             {"Механическая", "MECHANICAL" },
@@ -54,14 +54,14 @@ namespace AutoSearch
             {"Вариатор", "VARIATOR" }
         };
 
-        static Dictionary<string, string> gearType = new Dictionary<string, string>()
+        public static Dictionary<string, string> gearType = new Dictionary<string, string>()
         {
             {"Полный привод", "ALL_WHEEL_DRIVE" },
             {"Передний привод", "FORWARD_CONTROL" },
             {"Задний привод", "REAR_DRIVE" }
         };
 
-        static Dictionary<string, string> wheel = new Dictionary<string, string>()
+        public static Dictionary<string, string> wheel = new Dictionary<string, string>()
         {
             {"Левый", "LEFT" },
             {"Правый", "RIGHT" }

@@ -23,6 +23,13 @@ namespace AutoSearch
         public MainWindow()
         {
             InitializeComponent();
+            
+            markComboBox.ItemsSource = Categories.marks.Keys;
+            categoryComboBox.ItemsSource = Categories.bodyType.Keys;
+            gearComboBox.ItemsSource = Categories.gearType.Keys;
+            engineComboBox.ItemsSource = Categories.engineType.Keys;
+            transmissionComboBox.ItemsSource = Categories.transmission.Keys;
+            wheelComboBox.ItemsSource = Categories.wheel.Keys;
         }
     }
 

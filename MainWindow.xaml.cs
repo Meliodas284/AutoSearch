@@ -25,4 +25,5 @@ namespace AutoSearch
             InitializeComponent();
         }
     }
+
 }

@@ -48,5 +48,21 @@ namespace AutoSearch
             wheelComboBox.DisplayMemberPath = "Key";
             wheelComboBox.SelectedValuePath = "Value";
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            SearchParams pr = (SearchParams)this.Resources["params"];
+            MessageBox.Show(pr.BodyType);
+        }
+    }
+
+    public class SearchParams
+    {
+        public string Mark { get; set; }
+        public string BodyType { get; set; }
+        public string GearType { get; set; }
+        public string EngineType { get; set; }
+        public string Transmission { get; set; }
+        public string Wheel { get; set; }
     }
 }

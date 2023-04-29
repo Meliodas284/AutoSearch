@@ -23,14 +23,30 @@ namespace AutoSearch
         public MainWindow()
         {
             InitializeComponent();
+
+            markComboBox.ItemsSource = Categories.marks;
+            markComboBox.DisplayMemberPath = "Key";
+            markComboBox.SelectedValuePath = "Value";
             
-            markComboBox.ItemsSource = Categories.marks.Keys;
-            categoryComboBox.ItemsSource = Categories.bodyType.Keys;
-            gearComboBox.ItemsSource = Categories.gearType.Keys;
-            engineComboBox.ItemsSource = Categories.engineType.Keys;
-            transmissionComboBox.ItemsSource = Categories.transmission.Keys;
-            wheelComboBox.ItemsSource = Categories.wheel.Keys;
+            categoryComboBox.ItemsSource = Categories.bodyType;
+            categoryComboBox.DisplayMemberPath = "Key";
+            categoryComboBox.SelectedValuePath = "Value";
+            
+            gearComboBox.ItemsSource = Categories.gearType;
+            gearComboBox.DisplayMemberPath = "Key";
+            gearComboBox.SelectedValuePath = "Value";
+            
+            engineComboBox.ItemsSource = Categories.engineType;
+            engineComboBox.DisplayMemberPath = "Key";
+            engineComboBox.SelectedValuePath = "Value";
+            
+            transmissionComboBox.ItemsSource = Categories.transmission;
+            transmissionComboBox.DisplayMemberPath = "Key";
+            transmissionComboBox.SelectedValuePath = "Value";
+            
+            wheelComboBox.ItemsSource = Categories.wheel;
+            wheelComboBox.DisplayMemberPath = "Key";
+            wheelComboBox.SelectedValuePath = "Value";
         }
     }
-
 }

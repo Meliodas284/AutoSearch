@@ -52,7 +52,7 @@ namespace AutoSearch
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             SearchParams pr = (SearchParams)this.Resources["params"];
-            MessageBox.Show(pr.BodyType);
+            MessageBox.Show(pr.ToString());
         }
     }
 
@@ -64,5 +64,11 @@ namespace AutoSearch
         public string EngineType { get; set; }
         public string Transmission { get; set; }
         public string Wheel { get; set; }
+
+        public override string ToString()
+        {
+            string text = $"{Mark}\n{BodyType}\n{GearType}\n{EngineType}\n{Transmission}\n{Wheel}";
+            return text;
+        }
     }
 }

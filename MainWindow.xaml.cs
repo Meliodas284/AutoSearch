@@ -52,7 +52,7 @@ namespace AutoSearch
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             SearchParams pr = (SearchParams)this.Resources["params"];
-            MessageBox.Show(pr.ToString());
+            MessageBox.Show($"{pr.ToString()}\n{pr.PriceFrom.GetType()}");
         }
     }
 
@@ -64,10 +64,14 @@ namespace AutoSearch
         public string EngineType { get; set; }
         public string Transmission { get; set; }
         public string Wheel { get; set; }
+        public ulong PriceFrom { get; set; }
+        public ulong PriceTo { get; set; }
+        public uint PowerFrom { get; set; }
+        public uint PowerTo { get; set; }
 
         public override string ToString()
         {
-            string text = $"{Mark}\n{BodyType}\n{GearType}\n{EngineType}\n{Transmission}\n{Wheel}";
+            string text = $"{PriceFrom}\n{PriceTo}\n{PowerFrom}\n{PowerTo}";
             return text;
         }
     }

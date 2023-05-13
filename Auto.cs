@@ -17,6 +17,6 @@ namespace AutoSearch
         public string GearType { get; set; }
         public string Wheel { get; set; }
         public string Image { get; set; }
-        public int Price { get; set; }
+        public ulong Price { get; set; }
     }
 }

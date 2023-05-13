@@ -30,8 +30,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="priceFromTB" Grid.Column="0" Margin="0,0,3,0"></TextBox>
-                <TextBox x:Name="priceToTB" Grid.Column="1" Margin="3,0,0,0"></TextBox>
+                <TextBox x:Name="priceFromTB" Grid.Column="0" Margin="0,0,3,0"
+                         Text="{Binding Source={StaticResource params}, Path=PriceFrom, Mode=OneWayToSource}"></TextBox>
+                <TextBox x:Name="priceToTB" Grid.Column="1" Margin="3,0,0,0"
+                         Text="{Binding Source={StaticResource params}, Path=PriceTo, Mode=OneWayToSource}"></TextBox>
             </Grid>
             <ComboBox x:Name="categoryComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params}, Path=BodyType,
                 Mode=OneWayToSource}"></ComboBox>
@@ -54,8 +56,10 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="powerFromTB" Grid.Column="0" Margin="0,0,3,0"></TextBox>
-                <TextBox x:Name="powerToTB" Grid.Column="1" Margin="3,0,0,0"></TextBox>
+                <TextBox x:Name="powerFromTB" Grid.Column="0" Margin="0,0,3,0"
+                         Text="{Binding Source={StaticResource params}, Path=PowerFrom, Mode=OneWayToSource}"></TextBox>
+                <TextBox x:Name="powerToTB" Grid.Column="1" Margin="3,0,0,0"
+                         Text="{Binding Source={StaticResource params}, Path=PowerTo, Mode=OneWayToSource}"></TextBox>
             </Grid>
         </StackPanel>
         <Button x:Name="button1" Grid.Column="2" Grid.Row="2" Content="Send" Click="button1_Click"></Button>

@@ -9,7 +9,12 @@ namespace AutoSearch
 {
     internal class AutoCollection
     {
-        public ObservableCollection<Auto> Cars { get; }
+        public ObservableCollection<Auto> Cars { get; private set; }
+
+        public AutoCollection()
+        {
+            this.Cars = new ObservableCollection<Auto>();
+        }
         
         public void Add(Auto auto)
         {

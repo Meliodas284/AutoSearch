@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace AutoSearch
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<Auto> autoCollection;
         public MainWindow()
         {
             InitializeComponent();
@@ -51,8 +53,10 @@ namespace AutoSearch
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            SearchParams pr = (SearchParams)this.Resources["params"];
-            MessageBox.Show($"{pr.ToString()}\n{pr.PriceFrom.GetType()}");
+            SearchParams param = (SearchParams)this.Resources["params"];
+            string query = Query.createQuery(param);
+            autoCollection = Query.executeQuery(query);
+            MessageBox.Show(autoCollection[0].ToString());
         }
     }
 

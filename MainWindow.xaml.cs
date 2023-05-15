@@ -49,6 +49,10 @@ namespace AutoSearch
             wheelComboBox.ItemsSource = Categories.wheel;
             wheelComboBox.DisplayMemberPath = "Key";
             wheelComboBox.SelectedValuePath = "Value";
+            priceFromTB.Text = "0";
+            priceToTB.Text = "100000000000";
+            powerFromTB.Text = "0";
+            powerToTB.Text = "1000";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -57,6 +61,23 @@ namespace AutoSearch
             string query = Query.createQuery(param);
             autoCollection = Query.executeQuery(query);
             MessageBox.Show(autoCollection[0].ToString());
+        }
+
+        private void textInput_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            long val;
+            if (!long.TryParse(e.Text, out val))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void keyInput_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+            }
         }
     }
 

@@ -23,43 +23,64 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="0">
+            
             <ComboBox x:Name="markComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params}, 
                 Path=Mark, Mode=OneWayToSource}"></ComboBox>
+            
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                
                 <TextBox x:Name="priceFromTB" Grid.Column="0" Margin="0,0,3,0"
-                         Text="{Binding Source={StaticResource params}, Path=PriceFrom, Mode=OneWayToSource}"></TextBox>
+                         Text="{Binding Source={StaticResource params}, Path=PriceFrom, Mode=OneWayToSource}"
+                         PreviewTextInput="textInput_PreviewTextInput"
+                         PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
+                
                 <TextBox x:Name="priceToTB" Grid.Column="1" Margin="3,0,0,0"
-                         Text="{Binding Source={StaticResource params}, Path=PriceTo, Mode=OneWayToSource}"></TextBox>
+                         Text="{Binding Source={StaticResource params}, Path=PriceTo, Mode=OneWayToSource}"
+                         PreviewTextInput="textInput_PreviewTextInput"
+                         PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
+            
             </Grid>
+            
             <ComboBox x:Name="categoryComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params}, Path=BodyType,
                 Mode=OneWayToSource}"></ComboBox>
+        
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
+            
             <ComboBox x:Name="gearComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
                 Path=GearType, Mode=OneWayToSource}"></ComboBox>
             <ComboBox x:Name="engineComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
                 Path=EngineType, Mode=OneWayToSource}"></ComboBox>
             <ComboBox x:Name="transmissionComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
                 Path=Transmission, Mode=OneWayToSource}"></ComboBox>
+       
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2">
+            
             <ComboBox x:Name="wheelComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
                 Path=Wheel, Mode=OneWayToSource}"></ComboBox>
+
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
                 <TextBox x:Name="powerFromTB" Grid.Column="0" Margin="0,0,3,0"
-                         Text="{Binding Source={StaticResource params}, Path=PowerFrom, Mode=OneWayToSource}"></TextBox>
+                         Text="{Binding Source={StaticResource params}, Path=PowerFrom, Mode=OneWayToSource}"
+                         PreviewTextInput="textInput_PreviewTextInput"
+                         PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
+
                 <TextBox x:Name="powerToTB" Grid.Column="1" Margin="3,0,0,0"
-                         Text="{Binding Source={StaticResource params}, Path=PowerTo, Mode=OneWayToSource}"></TextBox>
+                         Text="{Binding Source={StaticResource params}, Path=PowerTo, Mode=OneWayToSource}"
+                         PreviewTextInput="textInput_PreviewTextInput"
+                         PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
             </Grid>
         </StackPanel>
         <Button x:Name="button1" Grid.Column="2" Grid.Row="2" Content="Send" Click="button1_Click"></Button>

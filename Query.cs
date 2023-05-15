@@ -46,14 +46,12 @@ namespace AutoSearch
                                 Model = reader.GetValue(1).ToString(),
                                 Category = reader.GetValue(2).ToString(),
                                 EngineType = reader.GetValue(3).ToString(),
-                                //Powers = int.Parse(reader.GetValue(4).ToString()),
-                                Powers = 10,
+                                Powers = int.Parse(reader.GetValue(4).ToString()),
                                 Transmission = reader.GetValue(5).ToString(),
                                 GearType = reader.GetValue(6).ToString(),
                                 Wheel = reader.GetValue(7).ToString(),
                                 Image = reader.GetValue(8).ToString(),
-                                //Price = ulong.Parse(reader.GetValue(9).ToString()),
-                                Price = 10,
+                                Price = ulong.Parse(reader.GetValue(9).ToString()),
                             };
                             collection.Add(auto);
                         }

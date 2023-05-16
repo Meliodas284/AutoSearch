@@ -22,9 +22,23 @@ namespace AutoSearch
     public partial class MainWindow : Window
     {
         ObservableCollection<Auto> autoCollection;
+        SearchParams autoParam = new SearchParams()
+        {
+            Mark = "%",
+            BodyType = "%",
+            GearType = "%",
+            EngineType = "%",
+            Transmission = "%",
+            Wheel = "%",
+            PriceFrom = 0,
+            PriceTo = 1000000000,
+            PowerFrom = 0,
+            PowerTo = 1000
+        };
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = autoParam;
 
             markComboBox.ItemsSource = Categories.marks;
             markComboBox.DisplayMemberPath = "Key";
@@ -49,16 +63,11 @@ namespace AutoSearch
             wheelComboBox.ItemsSource = Categories.wheel;
             wheelComboBox.DisplayMemberPath = "Key";
             wheelComboBox.SelectedValuePath = "Value";
-            priceFromTB.Text = "0";
-            priceToTB.Text = "100000000000";
-            powerFromTB.Text = "0";
-            powerToTB.Text = "1000";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            SearchParams param = (SearchParams)this.Resources["params"];
-            string query = Query.createQuery(param);
+            string query = Query.createQuery(autoParam);
             autoCollection = Query.executeQuery(query);
             MessageBox.Show(autoCollection[0].ToString());
         }

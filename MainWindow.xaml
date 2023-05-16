@@ -6,10 +6,7 @@
         xmlns:local="clr-namespace:AutoSearch"
         mc:Ignorable="d"
         Title="AutoSearch" Height="300" Width="800">
-    <Window.Resources>
-        <local:SearchParams x:Key="params"></local:SearchParams>
-    </Window.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
@@ -24,8 +21,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0">
             
-            <ComboBox x:Name="markComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params}, 
-                Path=Mark, Mode=OneWayToSource}"></ComboBox>
+            <ComboBox x:Name="markComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Mark, Mode=TwoWay}"></ComboBox>
             
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
@@ -34,37 +30,32 @@
                 </Grid.ColumnDefinitions>
                 
                 <TextBox x:Name="priceFromTB" Grid.Column="0" Margin="0,0,3,0"
-                         Text="{Binding Source={StaticResource params}, Path=PriceFrom, Mode=OneWayToSource}"
+                         Text="{Binding Path=PriceFrom, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
                 
                 <TextBox x:Name="priceToTB" Grid.Column="1" Margin="3,0,0,0"
-                         Text="{Binding Source={StaticResource params}, Path=PriceTo, Mode=OneWayToSource}"
+                         Text="{Binding Path=PriceTo, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
             
             </Grid>
             
-            <ComboBox x:Name="categoryComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params}, Path=BodyType,
-                Mode=OneWayToSource}"></ComboBox>
+            <ComboBox x:Name="categoryComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=BodyType, Mode=TwoWay}"></ComboBox>
         
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
             
-            <ComboBox x:Name="gearComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
-                Path=GearType, Mode=OneWayToSource}"></ComboBox>
-            <ComboBox x:Name="engineComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
-                Path=EngineType, Mode=OneWayToSource}"></ComboBox>
-            <ComboBox x:Name="transmissionComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
-                Path=Transmission, Mode=OneWayToSource}"></ComboBox>
+            <ComboBox x:Name="gearComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=GearType, Mode=TwoWay}"></ComboBox>
+            <ComboBox x:Name="engineComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=EngineType, Mode=TwoWay}"></ComboBox>
+            <ComboBox x:Name="transmissionComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Transmission, Mode=TwoWay}"></ComboBox>
        
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2">
             
-            <ComboBox x:Name="wheelComboBox" Margin="5" Height="40" SelectedValue="{Binding Source={StaticResource params},
-                Path=Wheel, Mode=OneWayToSource}"></ComboBox>
+            <ComboBox x:Name="wheelComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Wheel, Mode=TwoWay}"></ComboBox>
 
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
@@ -73,12 +64,12 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox x:Name="powerFromTB" Grid.Column="0" Margin="0,0,3,0"
-                         Text="{Binding Source={StaticResource params}, Path=PowerFrom, Mode=OneWayToSource}"
+                         Text="{Binding Path=PowerFrom, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
 
                 <TextBox x:Name="powerToTB" Grid.Column="1" Margin="3,0,0,0"
-                         Text="{Binding Source={StaticResource params}, Path=PowerTo, Mode=OneWayToSource}"
+                         Text="{Binding Path=PowerTo, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
             </Grid>

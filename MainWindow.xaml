@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoSearch"
         mc:Ignorable="d"
-        Title="AutoSearch" Height="300" Width="800">
+        Title="AutoSearch" Height="350" Width="800">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -20,7 +20,8 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="0">
-            
+
+            <TextBlock x:Name="markTitle" Text="Марка" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="markComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Mark, Mode=TwoWay}"></ComboBox>
             
             <Grid Height="40" Margin="5">
@@ -28,33 +29,40 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                
+
                 <TextBox x:Name="priceFromTB" Grid.Column="0" Margin="0,0,3,0"
                          Text="{Binding Path=PriceFrom, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
-                
+                    
                 <TextBox x:Name="priceToTB" Grid.Column="1" Margin="3,0,0,0"
                          Text="{Binding Path=PriceTo, Mode=TwoWay}"
                          PreviewTextInput="textInput_PreviewTextInput"
                          PreviewKeyDown="keyInput_PreviewKeyDown"></TextBox>
             
             </Grid>
-            
+
+            <TextBlock x:Name="categoryTitle" Text="Кузов" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="categoryComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=BodyType, Mode=TwoWay}"></ComboBox>
         
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
-            
+
+            <TextBlock x:Name="gearTitle" Text="Привод" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="gearComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=GearType, Mode=TwoWay}"></ComboBox>
+
+            <TextBlock x:Name="engineTitle" Text="Тип топлива" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="engineComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=EngineType, Mode=TwoWay}"></ComboBox>
+
+            <TextBlock x:Name="transmissionTitle" Text="Тип коробки передач" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="transmissionComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Transmission, Mode=TwoWay}"></ComboBox>
        
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2">
-            
+
+            <TextBlock x:Name="wheelTitle" Text="Руль" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="wheelComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Wheel, Mode=TwoWay}"></ComboBox>
 
             <Grid Height="40" Margin="5">

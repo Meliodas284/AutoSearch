@@ -69,7 +69,16 @@ namespace AutoSearch
         {
             string query = Query.createQuery(autoParam);
             autoCollection = Query.executeQuery(query);
-            MessageBox.Show(autoCollection[0].ToString());
+            if (autoCollection == null)
+            {
+                MessageBox.Show("Результатов по вашему запросу не найдено.");
+            }
+            else
+            {
+                Result resultWindow = new Result();
+                resultWindow.DataContext = autoCollection;
+                resultWindow.Show();
+            }
         }
 
         private void textInput_PreviewTextInput(object sender, TextCompositionEventArgs e)

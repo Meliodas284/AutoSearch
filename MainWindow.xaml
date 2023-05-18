@@ -19,6 +19,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <TextBlock x:Name="mainTitle" Grid.Column="1" Text="Поиск автомобилей"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="0">
 
             <TextBlock x:Name="markTitle" Text="Марка" HorizontalAlignment="Center"></TextBlock>

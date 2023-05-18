@@ -23,7 +23,8 @@
 
             <TextBlock x:Name="markTitle" Text="Марка" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="markComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Mark, Mode=TwoWay}"></ComboBox>
-            
+
+            <TextBlock x:Name="priceTitle" Text="Цена" HorizontalAlignment="Center"></TextBlock>
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -65,6 +66,7 @@
             <TextBlock x:Name="wheelTitle" Text="Руль" HorizontalAlignment="Center"></TextBlock>
             <ComboBox x:Name="wheelComboBox" Margin="5" Height="40" SelectedValue="{Binding Path=Wheel, Mode=TwoWay}"></ComboBox>
 
+            <TextBlock x:Name="powerTitle" Text="Мощность" HorizontalAlignment="Center"></TextBlock>
             <Grid Height="40" Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

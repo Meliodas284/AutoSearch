@@ -41,28 +41,28 @@ namespace AutoSearch
             this.DataContext = autoParam;
 
             markComboBox.ItemsSource = Categories.marks;
-            markComboBox.DisplayMemberPath = "Key";
-            markComboBox.SelectedValuePath = "Value";
+            markComboBox.DisplayMemberPath = "Value";
+            markComboBox.SelectedValuePath = "Key";
             
             categoryComboBox.ItemsSource = Categories.bodyType;
-            categoryComboBox.DisplayMemberPath = "Key";
-            categoryComboBox.SelectedValuePath = "Value";
+            categoryComboBox.DisplayMemberPath = "Value";
+            categoryComboBox.SelectedValuePath = "Key";
             
             gearComboBox.ItemsSource = Categories.gearType;
-            gearComboBox.DisplayMemberPath = "Key";
-            gearComboBox.SelectedValuePath = "Value";
+            gearComboBox.DisplayMemberPath = "Value";
+            gearComboBox.SelectedValuePath = "Key";
             
             engineComboBox.ItemsSource = Categories.engineType;
-            engineComboBox.DisplayMemberPath = "Key";
-            engineComboBox.SelectedValuePath = "Value";
+            engineComboBox.DisplayMemberPath = "Value";
+            engineComboBox.SelectedValuePath = "Key";
             
             transmissionComboBox.ItemsSource = Categories.transmission;
-            transmissionComboBox.DisplayMemberPath = "Key";
-            transmissionComboBox.SelectedValuePath = "Value";
+            transmissionComboBox.DisplayMemberPath = "Value";
+            transmissionComboBox.SelectedValuePath = "Key";
             
             wheelComboBox.ItemsSource = Categories.wheel;
-            wheelComboBox.DisplayMemberPath = "Key";
-            wheelComboBox.SelectedValuePath = "Value";
+            wheelComboBox.DisplayMemberPath = "Value";
+            wheelComboBox.SelectedValuePath = "Key";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

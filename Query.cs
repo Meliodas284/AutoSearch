@@ -42,14 +42,14 @@ namespace AutoSearch
                         {
                             var auto = new Auto()
                             {
-                                Mark = reader.GetValue(0).ToString(),
+                                Mark = Categories.marks[reader.GetValue(0).ToString()],
                                 Model = reader.GetValue(1).ToString(),
-                                Category = reader.GetValue(2).ToString(),
-                                EngineType = reader.GetValue(3).ToString(),
+                                Category = Categories.bodyType[reader.GetValue(2).ToString()],
+                                EngineType = Categories.engineType[reader.GetValue(3).ToString()],
                                 Powers = int.Parse(reader.GetValue(4).ToString()),
-                                Transmission = reader.GetValue(5).ToString(),
-                                GearType = reader.GetValue(6).ToString(),
-                                Wheel = reader.GetValue(7).ToString(),
+                                Transmission = Categories.transmission[reader.GetValue(5).ToString()],
+                                GearType = Categories.gearType[reader.GetValue(6).ToString()],
+                                Wheel = Categories.wheel[reader.GetValue(7).ToString()],
                                 Image = reader.GetValue(8).ToString(),
                                 Price = ulong.Parse(reader.GetValue(9).ToString()),
                             };

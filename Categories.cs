@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace AutoSearch
 {
-    internal static class Categories
+    public static class Categories
     {
         public static Dictionary<string, string> marks = new Dictionary<string, string>()
         {
-            {"Любая", "%" },
+            {"%", "Любая" },
             {"BMW", "BMW" },
-            {"Mercedes-Benz", "Mercedes" },
+            {"Mercedes-Benz", "Mercedes-Benz" },
             {"Ford", "Ford" },
             {"Lexus", "Lexus" },
             {"Audi", "Audi" },
@@ -22,55 +22,73 @@ namespace AutoSearch
             {"Kia", "Kia" },
             {"Mazda", "Mazda" },
             {"Nissan", "Nissan" },
-            {"Porsche", "Porshe" },
+            {"Porsche", "Porsche" },
             {"Subaru", "Subaru" },
-            {"Toyota", "Toyota" }
+            {"Toyota", "Toyota" },
+            {"Suzuki", "Suzuki" },
+            {"Volkswagen", "Volkswagen" }
         };
 
         public static Dictionary<string, string> bodyType = new Dictionary<string, string>()
         {
-            {"Любой", "%" },
-            {"Седан", "SEDAN" },
-            {"Хэтчбек 3 дв.", "HATCHBACK_3_DOORS" },
-            {"Хэтчбек 5 дв.", "HATCHBACK_5_DOORS"},
-            {"Лифтбек", "LIFTBACK" },
-            {"Внедорожник 5 дв.", "ALLROAD_5_DOORS" },
-            {"Универсал", "WAGON_5_DOORS" },
-            {"Кабриолет", "CABRIO" },
-            {"Купе", "COUPE" }
+            {"%", "Любой" },
+            {"SEDAN", "Седан" },
+            {"SEDAN_HARDTOP", "Седан с жесткой крышей" },
+            {"SEDAN_2_DOORS", "Седан 2 дв." },
+            {"HATCHBACK_3_DOORS", "Хэтчбек 3 дв." },
+            {"HATCHBACK_4_DOORS", "Хэтчбек 4 дв." },
+            {"HATCHBACK_5_DOORS", "Хэтчбек 5 дв."},
+            {"LIFTBACK", "Лифтбек" },
+            {"ALLROAD_5_DOORS", "Внедорожник 5 дв." },
+            {"ALLROAD_3_DOORS", "Внедорожник 3 дв." },
+            {"WAGON_5_DOORS", "Универсал" },
+            {"CABRIO", "Кабриолет" },
+            {"COUPE", "Купе" },
+            {"COMPACTVAN", "Компакт" },
+            {"ROADSTER", "Родстер" },
+            {"WAGON", "Фургон" },
+            {"ALLROAD_OPEN", "Внедорожник открытый" },
+            {"COUPE_HARDTOP", "Купе с жесткой крышей"},
+            {"MINIVAN", "Минивэн"},
+            {"MICROVAN", "Микровэн" },
+            {"PICKUP_ONE", "Пикап 1" },
+            {"PICKUP_TWO", "Пикап 2" },
+            {"VAN", "Van" },
+            {"TARGA", "Тарга" }
         };
 
         public static Dictionary<string, string> engineType = new Dictionary<string, string>()
         {
-            {"Любой", "%" },
-            {"Бензин", "GASOLINE" },
-            {"Дизель", "DIESEL" },
-            {"Электро", "ELECTRO" },
-            {"Гибрид", "HYBRID" },
+            {"%", "Любой" },
+            {"GASOLINE", "Бензин" },
+            {"DIESEL", "Дизель" },
+            {"ELECTRO", "Электро" },
+            {"HYBRID", "Гибрид" },
+            {"LPG", "Газ" },
         };
 
         public static Dictionary<string, string> transmission = new Dictionary<string, string>()
         {
-            {"Любая", "%" },
-            {"Автоматическая", "AUTOMATIC" },
-            {"Механическая", "MECHANICAL" },
-            {"Робот", "ROBOT" },
-            {"Вариатор", "VARIATOR" }
+            {"%", "Любая" },
+            {"AUTOMATIC", "Автоматическая" },
+            {"MECHANICAL", "Механическая" },
+            {"ROBOT", "Робот" },
+            {"VARIATOR", "Вариатор" }
         };
 
         public static Dictionary<string, string> gearType = new Dictionary<string, string>()
         {
-            {"Любой", "%" },
-            {"Полный привод", "ALL_WHEEL_DRIVE" },
-            {"Передний привод", "FORWARD_CONTROL" },
-            {"Задний привод", "REAR_DRIVE" }
+            {"%", "Любой" },
+            {"ALL_WHEEL_DRIVE", "Полный привод" },
+            {"FORWARD_CONTROL", "Передний привод" },
+            {"REAR_DRIVE", "Задний привод" }
         };
 
         public static Dictionary<string, string> wheel = new Dictionary<string, string>()
         {
-            {"Любой", "%" },
-            {"Левый", "LEFT" },
-            {"Правый", "RIGHT" }
+            {"%", "Любой" },
+            {"LEFT", "Левый" },
+            {"RIGHT", "Правый" }
         };
 
     }

@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:AutoSearch"
         mc:Ignorable="d"
-        Title="AutoSearch" Height="450" Width="800">
+        Title="AutoSearch" Height="465" Width="700">
     <StackPanel>
-        <ListBox x:Name="resList" Height="300"></ListBox>
+        <ListBox x:Name="resList" Height="450"></ListBox>
     </StackPanel>
 </Window>

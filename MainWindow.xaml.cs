@@ -50,7 +50,7 @@ namespace AutoSearch
             wheelComboBox.SelectedValuePath = "Key";
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void sndButton_Click(object sender, RoutedEventArgs e)
         {
             string query = Query.createQuery(autoParam);
             autoCollection = Query.executeQuery(query);

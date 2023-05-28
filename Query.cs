@@ -44,7 +44,7 @@ namespace AutoSearch
                                 Transmission = Categories.transmission[reader.GetValue(5).ToString()],
                                 GearType = Categories.gearType[reader.GetValue(6).ToString()],
                                 Wheel = Categories.wheel[reader.GetValue(7).ToString()],
-                                Image = reader.GetValue(8).ToString(),
+                                Image = "https:" + reader.GetValue(8).ToString(),
                                 Price = ulong.Parse(reader.GetValue(9).ToString()),
                             };
                             collection.Add(auto);

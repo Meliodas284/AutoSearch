@@ -113,6 +113,8 @@
                          Text="{Binding Path=PowerTo, Mode=TwoWay}"
                          Style="{StaticResource txtBoxStyle}"></TextBox>
             </Grid>
+            <Image Height="100" Width="100" Source="//avatars.mds.yandex.net/get-autoru-vos/1987375/7341df864cb1826046952e1a4046c5f3/1200x900" />
+
         </StackPanel>
         <Button x:Name="sndButton" Grid.Column="2" Grid.Row="2" Content="Найти" Margin="10" 
                 Style="{DynamicResource MaterialDesignRaisedDarkButton}" 

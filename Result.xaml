@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoSearch"
         mc:Ignorable="d"
         Title="AutoSearch" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <ListBox x:Name="resList" Height="300"></ListBox>
+    </StackPanel>
 </Window>

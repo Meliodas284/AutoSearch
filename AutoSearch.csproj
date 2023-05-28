@@ -92,6 +92,7 @@
     <Compile Include="Result.xaml.cs">
       <DependentUpon>Result.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchParams.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

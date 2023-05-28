@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoSearch
+﻿namespace AutoSearch
 {
-    internal class Auto
+    public class Auto
     {
         public string Mark { get; set; }
         public string Model { get; set; }

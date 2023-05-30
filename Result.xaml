@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:AutoSearch"
         mc:Ignorable="d"
-        Title="AutoSearch" Height="500" Width="750">
+        Title="AutoSearch" Height="800" Width="800">
     <Window.Resources>
         <DataTemplate x:Key="resItemTemplate">
             <Grid Margin="10">
@@ -85,7 +85,7 @@
         </DataTemplate>
     </Window.Resources>
 
-    <StackPanel>
-        <ListBox x:Name="resList" Height="500" ItemTemplate="{StaticResource resItemTemplate}"></ListBox>
-    </StackPanel>
+    <Grid>
+        <ListBox x:Name="resList" ItemTemplate="{StaticResource resItemTemplate}"></ListBox>
+    </Grid>
 </Window>
